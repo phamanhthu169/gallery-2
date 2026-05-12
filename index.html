@@ -225,7 +225,7 @@
     constructor(json, options) {
       this.json = json || {};
       this.options = options || {};
-      this.cache = new THREE.Cache ? THREE.Cache : { add(){}, get(){ return undefined; }, remove(){} };
+      this.cache = { add(){}, get(){ return undefined; }, remove(){} };
       this.associations = new Map();
       this.primitiveCache = {};
       this.pendingRequests = {};
